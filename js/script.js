@@ -3,20 +3,34 @@ console.log('JS OK');
 const ticketPriceForKm = 0.21;
 
 const trainPrice = document.getElementById('train-price');
-
+const userAge = document.getElementById('user-age');
+const userKm = document.getElementById('user-km');
 
 //prompt per chidere dati all'utente
+
 let km = parseInt(prompt('quanti Kilometri si desidera percorrere?', 100));
 console.log(km + ' kilometri da percorrere');
 
 let age = parseInt(prompt('Quanti anni hai?', 20));
 console.log(age + ' eta\`');
 
-//prezzo del biglietto intero
+//prezzo del biglietto intero 
 let ticketTotalPrice = (km * ticketPriceForKm).toFixed(2);
 console.log(ticketTotalPrice + ' prezzo biglietto totale')
 
-trainPrice.innerText = ticketTotalPrice + ' €'
+// VERIFICA
+
+if (isNaN(km) || isNaN(age) || age < 1) {
+    alert('I valori inseriti non risultano validi')
+}
+
+else {
+    userKm.innerText = 'biglietto per ' + km + ' Kilometri'
+
+    userAge.innerText = age + ' Anni'
+
+    trainPrice.innerText = ticketTotalPrice + ' €'
+}
 
 
 //SOLUZIONE MIA
@@ -41,7 +55,6 @@ else {
         trainPrice.innerText = discountOver65  + ' € invece di ' + ticketTotalPrice + ' €'
     } 
 }
-
 
 
 
