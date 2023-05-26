@@ -2,13 +2,14 @@ console.log('JS OK');
 //create variabili per costo biglietto eta` e km  
 const ticketPriceForKm = 0.21;
 
+let discount = 0;
 
 
 //prompt per chidere dati all'utente
-let km = prompt('quanti Kilometri si desidera percorrere?', 100);
+let km = parseInt(prompt('quanti Kilometri si desidera percorrere?', 100));
 console.log(km + ' kilometri da percorrere');
 
-let age = prompt('Quanti anni hai?', 20);
+let age = parseInt(prompt('Quanti anni hai?', 20));
 console.log(age + ' eta\`');
 
 //prezzo del biglietto intero
@@ -20,7 +21,7 @@ console.log(ticketTotalPrice + ' prezzo biglietto totale')
 SOLUZIONE MIA
 
 if (age < 18){
-    // discount 20%
+     discount 20%
     let discountUnder18 = (ticketTotalPrice * 20 / 100).toFixed(2) 
     console.log(discountUnder18 + ' discount 20%')
     // prezzo biglietto sconto 20%
@@ -37,16 +38,22 @@ else if (age >= 65) {
 }
 */
 
-//soluzione consigliata
+// Validazione SOLUZIONE MIA
 
-let discount = 0;
-if (age < 18){
-    discount = 20     
+if (isNaN(km) || isNaN(age) || age < 1) {
+    alert('I valori inseriti non risultano validi')
 }
-else if (age >= 65) {
-   discount = 60
+else {   
+    //soluzione consigliata
+    
+    if (age < 18){
+        discount = 20     
+    }
+    else if (age >= 65) {
+        discount = 40
+    }
 }
-
+    
 let ticket = (ticketTotalPrice - (ticketTotalPrice * discount / 100)).toFixed(2)
 
 console.log('discount ' + discount + '%')
