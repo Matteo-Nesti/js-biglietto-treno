@@ -16,3 +16,11 @@ console.log(age);
 //prezzo del biglietto intero
 let ticketTotalPrice = km * ticketPriceForKm;
 console.log(ticketTotalPrice)
+
+// prezzo biglietto sconto 20%
+// discount 
+let discount = ticketTotalPrice * 20 / 100 
+console.log(discount)
+
+ticketUnder18 = ticketTotalPrice - discount
+console.log(ticketUnder18)
