@@ -8,19 +8,30 @@ let age;
 
 //prompt per chidere dati all'utente
 km = prompt('quanti Kilometri si desidera percorrere?', 100);
-console.log(km);
+console.log(km + ' kilometri da percorrere');
 
 age = prompt('Quanti anni hai?', 20);
-console.log(age);
+console.log(age + ' eta\`');
 
 //prezzo del biglietto intero
-let ticketTotalPrice = km * ticketPriceForKm;
-console.log(ticketTotalPrice)
+let ticketTotalPrice = (km * ticketPriceForKm).toFixed(2);
+console.log(ticketTotalPrice + ' prezzo biglietto totale')
 
-// prezzo biglietto sconto 20%
-// discount 
-let discount = ticketTotalPrice * 20 / 100 
-console.log(discount)
+if (age < 18){
+    // discount 20%
+    let discountUnder18 = (ticketTotalPrice * 20 / 100).toFixed(2) 
+    console.log(discountUnder18 + ' discount 20%')
+    // prezzo biglietto sconto 20%
+    let ticketUnder18 = (ticketTotalPrice - discountUnder18).toFixed(2)
+    console.log(ticketUnder18 + ' prezzo biglietto under 18')
+}
+else if (age >= 65) {
+    // discount 40%
+    let discountOver65 = (ticketTotalPrice * 40 / 100).toFixed(2)
+    console.log(discountOver65 + ' discount 40%')
+    // prezzo biglietto sconto 40%
+    let ticketOver65 = (ticketTotalPrice - discountOver65).toFixed(2)
+    console.log(ticketOver65 + ' prezzo biglietto over 60')
+}
 
-ticketUnder18 = ticketTotalPrice - discount
-console.log(ticketUnder18)
+
