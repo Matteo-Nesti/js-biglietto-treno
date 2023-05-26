@@ -24,22 +24,14 @@ if (isNaN(km) || isNaN(age) || age < 1) {
     alert('I valori inseriti non risultano validi')
 }
 
+//SOLUZIONE MIA
 else {
     userKm.innerText = 'biglietto per ' + km + ' Kilometri'
 
     userAge.innerText = age + ' Anni'
 
     trainPrice.innerText = ticketTotalPrice + ' €'
-}
 
-
-//SOLUZIONE MIA
-
-if (isNaN(km) || isNaN(age) || age < 1) {
-    alert('I valori inseriti non risultano validi')
-}
-else {
-    
     if (age < 18){
         //  discount 20%
         let discountUnder18 = (ticketTotalPrice - (ticketTotalPrice * 20 / 100)).toFixed(2) 
@@ -55,6 +47,9 @@ else {
         trainPrice.innerText = discountOver65  + ' € invece di ' + ticketTotalPrice + ' €'
     } 
 }
+
+
+
 
 
 
