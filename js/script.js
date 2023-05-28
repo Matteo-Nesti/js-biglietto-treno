@@ -1,7 +1,6 @@
 console.log('JS OK');
 //create variabili per costo biglietto eta` e km  
 const ticketPriceForKm = 0.21;
-
 const trainPrice = document.getElementById('train-price');
 const userAge = document.getElementById('user-age');
 const userKm = document.getElementById('user-km');
@@ -12,7 +11,7 @@ let km = parseInt(prompt('quanti Kilometri si desidera percorrere?', 100));
 console.log(km + ' kilometri da percorrere');
 
 let age = parseInt(prompt('Quanti anni hai?', 20));
-console.log(age + ' eta\`');
+console.log(age, age + ' eta\`');
 
 //prezzo del biglietto intero 
 let ticketTotalPrice = (km * ticketPriceForKm).toFixed(2);
@@ -26,9 +25,9 @@ if (isNaN(km) || isNaN(age) || age < 1) {
 
 //SOLUZIONE MIA
 else {
-    userKm.innerText = 'biglietto per ' + km + ' Kilometri'
+    userKm.innerText = km + ' Kilometri'
 
-    userAge.innerText = age + ' Anni'
+    userAge.innerText = ' ' + age + ' Anni'
 
     trainPrice.innerText = ticketTotalPrice + ' €'
 

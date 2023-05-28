@@ -9,11 +9,47 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
-    <div id="user-age">
-    </div>
-    <div id="user-km">
-    </div>
-    <div id="train-price">
-    </div>
+    <main class="main-bgc">
+        <div class="container d-flex justify-center align-center vh100">
+            <div class="ticket-body">
+                <div class="header-ticket text-center">
+                    <h1>Ticket Train</h1>
+                </div>
+                <div class="main-ticket">
+
+                    <div class="col-name border-black">
+                        <div class="name">
+                            <div class="fw-b m-b-1">Nome:</div>
+                            <span>Matteo Nesti</span>
+                        </div>
+                    </div>
+
+                    <div class="col-age border-black">
+                        <div class="age">
+                            <div class="fw-b m-b-1">Eta`: </div>
+                            <span id="user-age" class=""></span>
+                        </div>
+                    </div>
+
+                    <div class="col-km border-black">
+                        <div class="km">
+                            <div class="fw-b m-b-1">Biglietto valido per:</div>
+                            <span id="user-km" class=""></span>
+                        </div>
+                    </div>
+
+                    <div class="col-price border-black">
+                        <div class="price text-center">
+                            <span id="train-price" class="fw-b"></span>
+                        </div>  
+                    </div>
+                    
+                    <div class="validation-ticket">
+                    </div>   
+
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
